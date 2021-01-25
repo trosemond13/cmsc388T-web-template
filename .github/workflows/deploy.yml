@@ -18,5 +18,4 @@ jobs:
           password: ${{secrets.PASSWORD}}
           port: ${{secrets.PORT}}
           script: |
-            cd ./../../
             git pull
