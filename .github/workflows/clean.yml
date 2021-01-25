@@ -1,4 +1,4 @@
-name: Clean workdlow
+name: Clean workflow
 
 on:
   workflow_dispatch:
@@ -9,12 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: testing
-        uses: appleboy/ssh-action@main
+        uses: trosejr/ssh-action@main
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            cd TestRepo
-            git pull
+            unalias rm
+            #rm -rf <Repo-Name>
