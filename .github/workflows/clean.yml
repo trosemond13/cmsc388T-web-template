@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: testing
-        uses: applyboy/ssh-action@main
+        uses: applyboy/ssh-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
@@ -17,4 +17,3 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             unalias rm
-            #rm -rf <Repo-Name>
