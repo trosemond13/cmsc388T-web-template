@@ -23,4 +23,3 @@ jobs:
             cd ..
             cd ./pub/
             rm -rf trosemond13.github.io/
-            rmdir trosemond13.github.io/
