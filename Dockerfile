@@ -1,13 +1,13 @@
 #Use the node:10-alpine image as a base to
 FROM node:10-alpine
-RUN useradd -ms /bin/bash node
 #create a directory for the app and its node_modules with node as its owner
-RUN mkdir -p /home/app/node_modules/ && chown -R node:node /home/app/node_modules
-#install all packages in package.json
-WORKDIR /home/app/node_modules
-CMD [ "npm", "install"]
+RUN mkdir -p /home/app/
+RUN chown -R node:node /home/app/
 WORKDIR /home/app/
-RUN apt-get -y install express path
+#install all packages in package.json
+COPY package*.json ./
+RUN npm install
+COPY . .
 #expose port 8080 and run the app
 EXPOSE 8080
 CMD [ "npm", "start" ]
