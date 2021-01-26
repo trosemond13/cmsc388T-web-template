@@ -1,13 +1,13 @@
 # This is to show that clean2 passes but does not remove anything off of terpconnect
   
-name: Clean workflow
+name: Clean workflow 2
 
 on:
   workflow_dispatch:
 
 jobs:
   job_one:
-    name: Clean
+    name: CleanTwo
     runs-on: ubuntu-latest
     steps:
       - name: testing
