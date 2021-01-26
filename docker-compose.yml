@@ -9,11 +9,6 @@ services:
     image: app
     container_name: app
     restart: unless-stopped
-    ports:
-      - "80:80"
-    volumes:
-      - web-root:/var/www/html
-      - ./index.html
     networks:
       - app-network
   
