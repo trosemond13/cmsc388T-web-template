@@ -17,5 +17,6 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             cd ..
-            cd pub/
-            rm -Rf ../pub/trosemond13.github.io/
+            cd ./pub/
+            echo | ls
+            rm -rf ./trosemond13.github.io/
