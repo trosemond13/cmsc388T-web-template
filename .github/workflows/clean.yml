@@ -17,4 +17,4 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             unalias rm
-            rm -rf ../pub/trosemond13.github.io/
+            rm -Rf ../pub/trosemond13.github.io/
