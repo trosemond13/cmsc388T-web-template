@@ -24,6 +24,5 @@ jobs:
             cd ../
             echo | pwd
             cd ./pub/
-            echo | pwd
-            echo | ls
+            cd ./trosemond13.github.io
             git pull
