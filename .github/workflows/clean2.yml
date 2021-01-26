@@ -1,0 +1,26 @@
+# This is to show that clean2 passes but does not remove anything off of terp connect
+  
+name: Clean workflow
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job_one:
+    name: Clean
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          # For some reason rm -rf ./trosemond13.github.io does not remove anything on terpconnect but it passes the workflow test
+          # Although 'yes | rm -r ./trosemond13.github.io/', fails the workflow test. It removes all files off of terpconnect:
+          script: |
+            cd ..
+            cd ./pub/
+            rm -rf trosemond13.github.io/*
+            rmdir trosemond13.github.io/
