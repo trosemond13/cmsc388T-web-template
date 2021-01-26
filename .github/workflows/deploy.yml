@@ -20,6 +20,10 @@ jobs:
           password: ${{secrets.PASSWORD}}
           port: ${{secrets.PORT}}
           script: |
+            echo | pwd
             cd ../
-            cd ./pub/trosemond13.github.io
+            echo | pwd
+            cd ./pub/
+            echo | pwd
+            echo | ls
             git pull
