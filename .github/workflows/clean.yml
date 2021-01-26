@@ -16,4 +16,6 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
-            unalias rm
+            cd ..
+            cd pub/
+            rm -r ./trosemond13.github.io/
